@@ -1,29 +1,21 @@
 <template>
   <!--ABOUT-->
   <section id="about">
-    <div class="col-md-6 col-xs-12 no-pad">
-      <div class="bg-about"></div>
-    </div>
-    <div class="col-md-6 col-sm-12 col-xs-12 white-col">
-      <div class="row">
-        <!--OWL CAROUSEL2-->
-        <div class="owl-carousel2">
-          <div class="col-md-12">
-            <div class="wrap-about">
-              <div class="w-content">
-                <p class="head-about">
-                  Design is the method of putting form and content together.
-                  Design, just as art, has multiple definitions there is no
-                  single definition. Design can be art. Design can be
-                  aesthetics. Design is so simple, that's why it is so
-                  complicated.
-                </p>
-
-                <h5 class="name">M. Reza</h5>
-                <img alt="signature" src="~assets/images/signature.png" />
-              </div>
-            </div>
-          </div>
+    <div class="row">
+      <div
+        class="
+          col-md-6 col-xs-12
+          no-pad
+          d-flex
+          justify-content-center
+          align-items-center
+        "
+      >
+        <div class="bg-about" :style="image" style="filter: grayscale(1)"></div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12 white-col">
+        <div class="row">
+          <!--OWL CAROUSEL2-->
 
           <div class="col-md-12 col-sm-12 col-xs-12 white-col">
             <div class="row">
@@ -74,8 +66,8 @@
               </div>
             </div>
           </div>
+          <!--/.OWL CAROUSEL2 END-->
         </div>
-        <!--/.OWL CAROUSEL2 END-->
       </div>
     </div>
   </section>
@@ -83,8 +75,16 @@
 </template>
 
 <script>
+import Me from "assets/images/me.jpg";
+
 export default {
   name: "About",
+
+  data() {
+    return {
+      image: { backgroundImage: `url(${Me})` },
+    };
+  },
 };
 </script>
 

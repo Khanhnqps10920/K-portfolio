@@ -3,9 +3,7 @@
     <div class="for-sticky">
       <!--LOGO-->
       <div class="col-md-2 col-xs-6 logo">
-        <a href="#home"
-          ><img alt="logo" class="logo-nav" src="~assets/images/logo.png"
-        /></a>
+        <a href="#home" style="font-size: 30px; color: black">K.</a>
       </div>
       <!--/.LOGO END-->
     </div>
@@ -21,9 +19,7 @@
           <a data-scroll="" href="#work">
             <span>Work</span>
           </a>
-          <a data-scroll="" href="#services">
-            <span>Services</span>
-          </a>
+
           <a data-scroll="" href="#employement">
             <span>Employement</span>
           </a>
@@ -33,12 +29,7 @@
           <a data-scroll="" href="#education">
             <span>Education</span>
           </a>
-          <a data-scroll="" href="#testimonial">
-            <span>Testimonial</span>
-          </a>
-          <a data-scroll="" href="#blog">
-            <span>Blog</span>
-          </a>
+
           <a data-scroll="" href="#contact">
             <span>Contact</span>
           </a>

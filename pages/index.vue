@@ -4,7 +4,7 @@
     <div class="content-wrap">
       <div class="content">
         <HeroBanner />
-        <!-- <About /> -->
+        <About />
         <Work />
         <Employement />
         <Skills />
