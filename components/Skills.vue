@@ -3,47 +3,21 @@
   <section class="white-bg" id="skill">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <h3 class="title-small">
             <span>Skills</span>
           </h3>
           <p class="content-detail">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.
+            To complete the job in Frontend Position, here is a list of skills I
+            have learned and practiced during my working time.
           </p>
         </div>
-        <div class="col-md-9 content-right">
+        <div class="col-md-8 content-right">
           <!--SKILLST-->
-          <div class="skillst">
-            <div class="skillbar" data-percent="78%">
-              <div class="title head-sm">HTML 5</div>
-              <div class="count-bar">
-                <div class="count"></div>
-              </div>
-            </div>
-            <div class="skillbar" data-percent="91%">
-              <div class="title head-sm">CSS 4</div>
-              <div class="count-bar">
-                <div class="count"></div>
-              </div>
-            </div>
-            <div class="skillbar" data-percent="58%">
-              <div class="title head-sm">jQuery</div>
-              <div class="count-bar">
-                <div class="count"></div>
-              </div>
-            </div>
-            <div class="skillbar" data-percent="63%">
-              <div class="title head-sm">PHP</div>
-              <div class="count-bar">
-                <div class="count"></div>
-              </div>
-            </div>
-            <div class="skillbar" data-percent="95%">
-              <div class="title head-sm">Photoshop</div>
-              <div class="count-bar">
-                <div class="count"></div>
+          <div class="skillst row">
+            <div class="col-md-3 col-sm-6" v-for="skill in skills" :key="skill">
+              <div class="skillst-box">
+                <span>{{ skill }}</span>
               </div>
             </div>
           </div>
@@ -58,8 +32,38 @@
 <script>
 export default {
   name: "Skills",
+  data() {
+    return {
+      skills: ["JS", "TS", "Vue", "React", "SASS", "Nodejs", "Github", "Figma"],
+    };
+  },
 };
 </script>
 
 <style>
+.skillst-box {
+  height: 100px;
+  border-radius: 5px;
+  filter: grayscale(1);
+  box-shadow: 0px 0px 0px #818181;
+  border: 0.5px solid #818181;
+  /* background: #818181; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  filter: grayscale(1);
+  text-transform: uppercase;
+  transition: 0.4s ease;
+  margin-bottom: 10px;
+}
+
+.skillst-box:hover {
+  background-color: #818181;
+  color: white;
+  cursor: pointer;
+}
+
+.skillst {
+}
 </style>
