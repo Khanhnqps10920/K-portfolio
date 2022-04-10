@@ -1,8 +1,6 @@
 <template>
   <div id="preloader">
-    <div id="status">
-      <img alt="logo" src="~assets/images/logo-big.png" />
-    </div>
+    <div id="logo">K.</div>
   </div>
 </template>
 
@@ -13,4 +11,15 @@ export default {
 </script>
 
 <style>
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader #logo {
+  font-size: 80px;
+}
 </style>

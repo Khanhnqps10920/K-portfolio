@@ -1,6 +1,6 @@
 <template>
   <!--WORK-->
-  <section class="grey-bg mar-tm-10" id="work">
+  <section class="grey-bg mar-tm-10" id="work" v-animate-on-scroll>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -60,7 +60,7 @@
       <div class="custom-modal-content">
         <span class="close" @click.prevent="modalActive = false">&times;</span>
         <div class="video-wrapper">
-          <video controls class="video">
+          <video controls autoplay class="video">
             <source :src="videoSrc" />
           </video>
         </div>
@@ -71,6 +71,11 @@
 </template>
 
 <script>
+import SdkVid from "assets/images/reporting-sdk/sdk-vid.mp4";
+import DtdVid from "assets/images/dtd/dtd-vid.mp4";
+import PfVid from "assets/images/pf/pf-vid.mp4";
+import OdVid from "assets/images/od/od-vid.mp4";
+
 export default {
   name: "Work",
 
@@ -88,7 +93,7 @@ export default {
             "This SDK will return chart - visualization - table - etc",
             "Technologies Used: Vue, Vuex, Bootstrap Vue, chartjs, HightChart",
           ],
-          vid: "../assets/images/reporting-sdk/sdk-vid.mp4",
+          vid: SdkVid,
         },
         {
           id: 2,
@@ -98,7 +103,7 @@ export default {
             "A web application was created to help manage orders and barcodes of each product.",
             "Technologies used: Vue, Vuex, Bootstrap Vue, CPBO-SDK",
           ],
-          vid: "../assets/images/dtd/dtd-vid.mp4",
+          vid: DtdVid,
         },
         {
           id: 3,
@@ -108,7 +113,7 @@ export default {
             "A web application was created to manage financial of business",
             "Technologies Used: Vue, Vuex, Bootstrap Vue, CPBO-SDK",
           ],
-          vid: "../assets/images/pf/pf-vid.mp4",
+          vid: PfVid,
         },
         {
           id: 4,
@@ -118,22 +123,21 @@ export default {
             "A store selling outdoor equip items",
             "Technologies Used: Shopify, Liquid, Html, Css, Js",
           ],
-          vid: "../assets/images/od/od-vid.mp4",
+          vid: OdVid,
         },
       ],
     };
   },
   methods: {
     hanleWorkClick(work) {
-      // this.videoSrc = require(work.vid);
-
+      this.videoSrc = work.vid;
       this.modalActive = true;
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .desc-group {
   font-size: 10px !important;
   letter-spacing: 0.5px !important;
@@ -193,5 +197,15 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
+}
+
+.enter {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.before-enter {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 1.3s ease;
 }
 </style>

@@ -1,19 +1,20 @@
 <template>
   <!--CONTACT-->
-  <section id="contact" class="white-bg">
+  <section id="contact" class="white-bg" v-animate-on-scroll>
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-6">
           <h3 class="title-small">
             <span>Contact</span>
           </h3>
           <p class="content-detail">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.
+            Please contact me Via Email:
+            <a href="#">khanhng3009@gmail.com</a> Or my phone number
+            <a href="#"> 0938494081 </a> or leave information here (Contact me
+            directly by email, I will respond as soon as possible)
           </p>
         </div>
-        <div class="col-md-9 content-right">
+        <div class="col-md-6 content-right">
           <form>
             <div class="group">
               <input required="" type="text" /><span class="highlight"></span
@@ -47,5 +48,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.enter {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.before-enter {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 1.3s ease;
+}
 </style>

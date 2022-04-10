@@ -1,6 +1,6 @@
 <template>
   <!--EDUCATION-->
-  <section class="grey-bg" id="education">
+  <section class="grey-bg" id="education" v-animate-on-scroll>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -71,5 +71,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.enter {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.before-enter {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 1.3s ease;
+}
 </style>

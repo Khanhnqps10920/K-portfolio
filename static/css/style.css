@@ -667,11 +667,14 @@ ul.portfolio-image li .image-bg {
   letter-spacing: 1.5px;
   font-weight: 300;
   color: transparent;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 ul.portfolio-image li .desc{
-  position: absolute;
   z-index: 1;
-  top: 45%;
   left: 0;
   display: table-cell;
   right: 0;
@@ -1262,3 +1265,4 @@ ul.portfolio-image li .desc{
 }
 .skillst .count-bar .count { background-color: #818181;}
 .skillst .count-bar .count span:after { border-top: 4px solid #818181;}
+

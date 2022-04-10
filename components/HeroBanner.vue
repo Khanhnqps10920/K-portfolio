@@ -1,5 +1,5 @@
 <template>
-  <section id="home" :style="image">
+  <section id="home" :style="image" v-animate-on-scroll>
     <div class="container">
       <div class="row">
         <div class="wrap-hero-content">
@@ -91,6 +91,9 @@ export default {
 </script>
 
 <style  scoped>
+#home {
+  filter: grayscale(1);
+}
 span.cursor {
   display: inline-block;
   margin-left: 2px;
@@ -114,5 +117,15 @@ span.cursor.typing {
   99% {
     background-color: transparent;
   }
+}
+
+.enter {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.before-enter {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 1.3s ease;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <!--SKILLS-->
-  <section class="white-bg" id="skill">
+  <section class="white-bg" id="skill" v-animate-on-scroll>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .skillst-box {
   height: 100px;
   border-radius: 5px;
@@ -65,5 +65,15 @@ export default {
 }
 
 .skillst {
+}
+
+.enter {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.before-enter {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 1.3s ease;
 }
 </style>
