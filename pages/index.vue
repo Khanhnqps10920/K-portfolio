@@ -30,21 +30,21 @@ export default {
   name: "IndexPage",
   data() {
     return {
-      isShowPreloader: true,
+      isShowPreloader: false,
     };
   },
   methods: {
-    loader() {
-      document.onreadystatechange = () => {
-        console.log(document.readyState);
-        if (document.readyState === "complete") {
-          this.isShowPreloader = false;
-        }
-      };
-    },
+    // loader() {
+    //   document.onreadystatechange = () => {
+    //     console.log(document.readyState);
+    //     if (document.readyState === "complete") {
+    //       this.isShowPreloader = false;
+    //     }
+    //   };
+    // },
   },
   mounted() {
-    this.loader();
+    // this.loader();
   },
 };
 </script>
