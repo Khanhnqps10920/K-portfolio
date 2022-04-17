@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <!-- content -->
-    <template v-if="!isShowPreloader">
+    <div v-show="!isShowPreloader">
       <Header />
       <div class="content-wrap">
         <div class="content">
@@ -14,7 +14,7 @@
           <Contact />
         </div>
       </div>
-    </template>
+    </div>
 
     <!-- preloader -->
     <template v-if="isShowPreloader">
@@ -30,21 +30,27 @@ export default {
   name: "IndexPage",
   data() {
     return {
-      isShowPreloader: false,
+      isShowPreloader: true,
+      timeout: null,
     };
   },
   methods: {
-    // loader() {
-    //   document.onreadystatechange = () => {
-    //     console.log(document.readyState);
-    //     if (document.readyState === "complete") {
-    //       this.isShowPreloader = false;
-    //     }
-    //   };
-    // },
+    loader() {
+      this.timeout = setTimeout(() => {
+        this.isShowPreloader = !this.isShowPreloader;
+      }, 2000);
+    },
+    cleanUpLoader() {
+      clearTimeout(this.timeout);
+
+      this.timeout = null;
+    },
   },
   mounted() {
-    // this.loader();
+    this.loader();
+  },
+  unmounted() {
+    this.cleanUpLoader();
   },
 };
 </script>

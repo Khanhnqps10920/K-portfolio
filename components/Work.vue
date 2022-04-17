@@ -118,7 +118,7 @@ export default {
         {
           id: 4,
           name: "Outdoorequipped",
-          imgSrc: require("../assets/images/od/banner.png"),
+          imgSrc: require("../assets/images/od/banner.jpg"),
           des: [
             "A store selling outdoor equip items",
             "Technologies Used: Shopify, Liquid, Html, Css, Js",
